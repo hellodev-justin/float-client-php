@@ -1,0 +1,7 @@
+{
+	"invokerPackage": "Float\\Client",
+	"artifactVersion": "0.1.0",
+	"variableNamingConvention": "camelCase",
+	"gitUserId": "spinx",
+	"gitRepoId": "float-client-php"
+}
