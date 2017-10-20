@@ -18,14 +18,8 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
 
 ```
 {
-  "repositories": [
-    {
-      "type": "git",
-      "url": "https://github.com/spinx/float-client-php.git"
-    }
-  ],
   "require": {
-    "spinx/float-client-php": "*@dev"
+    "spinx/float-client-php": "~0.1.0"
   }
 }
 ```
