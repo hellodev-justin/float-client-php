@@ -268,8 +268,8 @@ class Person implements ArrayAccess
             $invalid_properties[] = "invalid value for 'notes', the character length must be smaller than or equal to 65535.";
         }
 
-        if (!is_null($this->container['avatarFile']) && (strlen($this->container['avatarFile']) > 40)) {
-            $invalid_properties[] = "invalid value for 'avatarFile', the character length must be smaller than or equal to 40.";
+        if (!is_null($this->container['avatarFile']) && (strlen($this->container['avatarFile']) > 255)) {
+            $invalid_properties[] = "invalid value for 'avatarFile', the character length must be smaller than or equal to 255.";
         }
 
         return $invalid_properties;
@@ -302,7 +302,7 @@ class Person implements ArrayAccess
         if (strlen($this->container['notes']) > 65535) {
             return false;
         }
-        if (strlen($this->container['avatarFile']) > 40) {
+        if (strlen($this->container['avatarFile']) > 255) {
             return false;
         }
         return true;
@@ -467,8 +467,8 @@ class Person implements ArrayAccess
      */
     public function setAvatarFile($avatarFile)
     {
-        if (!is_null($avatarFile) && (strlen($avatarFile) > 40)) {
-            throw new \InvalidArgumentException('invalid length for $avatarFile when calling Person., must be smaller than or equal to 40.');
+        if (!is_null($avatarFile) && (strlen($avatarFile) > 255)) {
+            throw new \InvalidArgumentException('invalid length for $avatarFile when calling Person., must be smaller than or equal to 255.');
         }
 
         $this->container['avatarFile'] = $avatarFile;
